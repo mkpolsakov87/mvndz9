@@ -1,5 +1,12 @@
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class RadioClass {
+    @Getter
     private int currentStation;
+    @Getter
     private int soundVolume;
     private int radioStations = 10;
 
@@ -7,13 +14,7 @@ public class RadioClass {
         this.radioStations = radioStations;
     }
 
-    public RadioClass() {
-
-    }
-
-    public int getCurrentStation() {
-        return currentStation;
-    }
+    //public int getCurrentStation() {   return currentStation;    }
 
     public void setCurrentStation(int newStation) {
         if (newStation < radioStations) {
@@ -47,9 +48,7 @@ public class RadioClass {
         }
     }
 
-    public int getSoundVolume() {
-        return soundVolume;
-    }
+    //public int getSoundVolume() {     return soundVolume;    }
 
     public void increaseVolume() {
         if (soundVolume < 100) {
